@@ -9,7 +9,6 @@ declare -r TARGET=${1:-localhost}
 while [[ ! $((--counter)) -eq 0 ]]
 do
     ${PING} ${TARGET} || break
-    echo $counter
     sleep 1
 done >& /dev/null
 
